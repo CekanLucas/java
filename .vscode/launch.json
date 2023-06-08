@@ -1,0 +1,49 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Iterators",
+      "request": "launch",
+      "mainClass": "Iterators",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "PersonTest",
+      "request": "launch",
+      "mainClass": "PersonTest"
+    },
+    {
+      "type": "java",
+      "name": "PersonTest-shouldwork",
+      "request": "launch",
+      "mainClass": "PersonTest",
+      "projectName": "java"
+    },
+    {
+      "type": "java",
+      "name": "PersonTest-workspace",
+      "request": "launch",
+      "mainClass": "PersonTest",
+      "projectName": "${workspaceFolder}"
+    },
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "App",
+      "request": "launch",
+      "mainClass": "com.computersciencework.App",
+      "projectName": "cs_work"
+    }
+  ]
+}
