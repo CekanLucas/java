@@ -16,8 +16,9 @@ public class Test {
 
   public static void main(String[] args) {
     try {
+      System.out.println(Ansi.CC);
       SortedLinkedList sortedList = new SortedLinkedList();
-      sortedList.insert("Zed"); 
+      sortedList.insert("Zed");
       sortedList.print();
       sortedList.insert("Ben");
       sortedList.print();
@@ -39,20 +40,18 @@ public class Test {
       sortedList.print();
       sortedList.remove(0);
       sortedList.print();
-      sortedList.remove(3);
-      sortedList.print();
       sortedList.remove(1);
       sortedList.print();
-      // test other methods
       sortedList.remove(
-        sortedList.find("Cleo")
-      );
+          sortedList.find("Cleo"));
       sortedList.print();
-      System.out.println("Name at index 5 " + sortedList.get(5));
+      // test other methods
+      System.out.println(Ansi.PURPLE + "Name at index 5 " + sortedList.get(5));
+      sortedList.removeAll();
       // test exception
-      sortedList.get(6);
+      sortedList.get(0);
     } catch (ListException e) {
-      System.err.println("An List Error: " + e.getMessage());
+      System.err.println(Ansi.RED + "An List Error: " + e.getMessage());
       e.printStackTrace();
     } catch (Exception e) {
       System.err.println("An error occurred: " + e.getMessage());

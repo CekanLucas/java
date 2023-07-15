@@ -1,6 +1,5 @@
 package datastructures.Labs.Lab7;
 
-import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -10,8 +9,8 @@ import java.util.Objects;
  * @class SortedLinkedList
  * @Disclaimer Any and all work in this file is my own except otherwise
  *             specified ie the questions
- * @Question The Sorted Linked List 
- * @sort Ascending Order  1 -> 2 -> 3
+ * @Question The Sorted Linked List
+ * @sort Ascending Order 1 -> 2 -> 3
  */
 
 public class SortedLinkedList {
@@ -35,18 +34,15 @@ public class SortedLinkedList {
   }
 
   public void insert(String item) {
-    
+
     SingleNode currentNode = head;
     SingleNode newNode = new SingleNode(item);
-    
-    if(head == null) {
+
+    if (head == null) {
       head = newNode;
       return;
-    }
-    else if (size() == 1) {
-      String[] comparisonArray = {head.item, item};
-      Arrays.sort(comparisonArray);
-      if(Objects.equals(comparisonArray[0], item)) {
+    } else if (size() == 1) {
+      if (head.item.compareTo(item) >= 0) {
         newNode.next = head;
         head = newNode;
         return;
@@ -54,28 +50,22 @@ public class SortedLinkedList {
         head.next = newNode;
         return;
       }
+    } else if (head.item.compareTo(item) >= 0) {
+      newNode.next = head;
+      head = newNode;
+      return;
     }
-    
-    while (currentNode.next != null) {
-      String item1 = currentNode.item;
-      String item2 = currentNode.next.item;
-      String[] comparisonArray = {item1, item2, item};
-      
-      Arrays.sort(comparisonArray);
 
-      boolean isFirstElement = Objects.equals(comparisonArray[0], item);  
-      boolean shouldInsert = Objects.equals(comparisonArray[1], item);  
-      if(isFirstElement) {
-        newNode.next = head;
-        head = newNode;
-        return;
-      } else if(shouldInsert) {
+    while (currentNode.next != null) {
+      String item2 = currentNode.next.item;
+
+      if (item.compareTo(item2) <= 0) {
         SingleNode node1 = currentNode;
         SingleNode node2 = currentNode.next;
         node1.next = newNode;
         newNode.next = node2;
         return;
-      } else 
+      } else
         currentNode = currentNode.next;
     }
 
@@ -147,11 +137,11 @@ public class SortedLinkedList {
     StringBuilder str = new StringBuilder("");
 
     if (isEmpty())
-      return "List is empty!";
+      return Ansi.RED + "List is empty!";
 
     while (currentNode != null) {
-      str.append(currentNode.item +
-          (currentNode.next == null ? "" : " -> "));
+      str.append(Ansi.YELLOW + currentNode.item + Ansi.RED +
+          (currentNode.next == null ? " -> " + Ansi.GREEN + "null" : " -> "));
       currentNode = currentNode.next;
     }
     return str.toString();
@@ -203,6 +193,17 @@ public class SortedLinkedList {
   }
 }
 
-/* DISCUSSION QUESTION: will the list remain sorted on removal? Explain  */
+/* DISCUSSION QUESTION: will the list remain sorted on removal? Explain */
 
 // yes, as long as you don't break the node chain
+
+interface Ansi {
+  String RESET = "\033[0m";
+  String CC = "\033[2J"; // clear console
+  String RED = "\033[22;31m";
+  String GREEN = "\033[1;32m";
+  String YELLOW = "\033[1;33m";
+  String BLUE = "\033[22;34m";
+  String PURPLE = "\033[1;35m";
+  String WHITE = "\033[1;37m";
+}
