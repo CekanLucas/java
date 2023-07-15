@@ -8,6 +8,18 @@
 		"cSpell.words": [
 			"Cloneable",
 			"mkdirs"
-		]
+		],
+		"maven.view": "hierarchical",
+		"java.dependency.packagePresentation": "hierarchical",
+		// "java.jdt.ls.java.home":"/home/dubi/projects/Algoma/jdk-17.0.7+7",
+		"java.autobuild.enabled": true,
+		"java.server.launchMode": "Standard",
+		"java.project.referencedLibraries": [
+			"/home/dubi/projects/java/lib/*.jar"
+		],
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"java.completion.enabled": true,
+		"java.debug.settings.onBuildFailureProceed": true
+
 	}
 }

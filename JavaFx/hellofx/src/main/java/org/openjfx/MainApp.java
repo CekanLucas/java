@@ -1,27 +1,40 @@
 package org.openjfx;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.layout.Pane;
 
 public class MainApp extends Application {
+  @Override
+  public void start(Stage primaryStage) {
+    Button btOk = new Button("OK");
+    Scene scene = new Scene(btOk, 200, 250);
 
-    @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("scene.fxml"));
-        
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
-        
-        stage.setTitle("JavaFX and Gradle");
-        stage.setScene(scene);
-        stage.show();
-    }
+    primaryStage.setTitle("My Java Project");
+    primaryStage.setScene(scene);
+    Circle circle = new Circle();
+    circle.setCenterX(100);
+    circle.setCenterY(100);
+    circle.setRadius(50);
+    circle.setStroke(Color.BLACK);
+    circle.setFill(Color.WHITE);
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+    Pane pane = new Pane();
+    pane.getChildren().add(circle);
 
+    // stage.setResizable(false);
+    primaryStage.show();
+  }
+
+  /**
+   * The main method is only needed for the IDE with limited JavaFX support
+   * Not needed for running from the command line
+   */
+  public static void main(String[] args) {
+    Application.launch(args);
+  }
 }
