@@ -1,102 +1,326 @@
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
+  "tasks": [
+    {
+      "label": "Update Launch Config",
+      "type": "shell",
+      "command": "node .vscode/update-launch-config.js",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ],
+  "inputs": [],
+  "compounds": [
+    {
+      "name": "Compound",
+      "configurations": []
+    }
+  ],
   "configurations": [
+    {
+      "type": "java",
+      "name": "ImplementStack",
+      "request": "launch",
+      "mainClass": "datastructures.assignments.assignment2.ImplementStack",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "ArrayQueue",
+      "request": "launch",
+      "mainClass": "datastructures.assignments.assignment2.ArrayQueue",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "UseQueue",
+      "request": "launch",
+      "mainClass": "datastructures.assignments.assignment2.UseQueue",
+      "projectName": "java_7846e781"
+    },
     {
       "type": "java",
       "name": "Test",
       "request": "launch",
-      "mainClass": "Test"
+      "mainClass": "datastructures.Labs.Lab7.Test",
+      "projectName": "java_7846e781"
     },
     {
       "type": "java",
-      "name": "RemoveDuplicates",
+      "name": "SortedLinkedList",
       "request": "launch",
-      "mainClass": "RemoveDuplicates",
-      "projectName": ""
+      "mainClass": "datastructures.Labs.Lab7.SortedLinkedList",
+      "projectName": "java_7846e781"
     },
     {
       "type": "java",
-      "name": "ReadFile",
+      "name": "QueueList",
       "request": "launch",
-      "mainClass": "ReadFile"
+      "mainClass": "datastructures.assignments.assignment2.QueueList",
+      "projectName": "java_7846e781"
     },
     {
       "type": "java",
-      "name": "TestVehicle",
+      "name": "Test",
       "request": "launch",
-      "mainClass": "TestVehicle",
-      "projectName": ""
+      "mainClass": "datastructures.Labs.Lab6.Test",
+      "projectName": "java_7846e781"
     },
     {
       "type": "java",
-      "name": "TestVehicles",
+      "name": "SingleLinkedList",
       "request": "launch",
-      "mainClass": "TestVehicles"
+      "mainClass": "datastructures.Labs.Lab6.SingleLinkedList",
+      "projectName": "java_7846e781"
     },
     {
       "type": "java",
-      "name": "DaysOfMonth",
+      "name": "TryStack",
       "request": "launch",
-      "mainClass": "DaysOfMonth",
-      "projectName": ""
+      "mainClass": "TryStack",
+      "projectName": "java_7846e781"
     },
     {
       "type": "java",
-      "name": "RemoveDuplicatesTest",
+      "name": "Test",
       "request": "launch",
-      "mainClass": "RemoveDuplicatesTest",
-      "projectName": ""
+      "mainClass": "datastructures.Labs.Lab5.Test",
+      "projectName": "java_7846e781"
     },
     {
       "type": "java",
-      "name": "ArrayMethodsTest",
+      "name": "ADTList",
       "request": "launch",
-      "mainClass": "ArrayMethodsTest",
-      "projectName": ""
+      "mainClass": "datastructures.Labs.Lab5.ADTList",
+      "projectName": "java_7846e781"
     },
     {
       "type": "java",
-      "name": "Iterators",
+      "name": "ListArray",
       "request": "launch",
-      "mainClass": "Iterators",
-      "projectName": ""
+      "mainClass": "datastructures.Labs.Lab5.ListArray",
+      "projectName": "java_7846e781"
     },
     {
       "type": "java",
-      "name": "PersonTest",
+      "name": "UsingLinkedList",
       "request": "launch",
-      "mainClass": "PersonTest"
+      "mainClass": "datastructures.assignments.assignment1.UsingLinkedList",
+      "projectName": "java_7846e781"
     },
     {
       "type": "java",
-      "name": "PersonTest-shouldwork",
+      "name": "LinkedList",
       "request": "launch",
-      "mainClass": "PersonTest",
-      "projectName": "java"
+      "mainClass": "datastructures.assignments.assignment1.LinkedList",
+      "projectName": "java_7846e781"
     },
     {
       "type": "java",
-      "name": "PersonTest-workspace",
+      "name": "RecursiveBinarySearch",
       "request": "launch",
-      "mainClass": "PersonTest",
-      "projectName": "${workspaceFolder}"
+      "mainClass": "datastructures.assignments.assignment1.RecursiveBinarySearch",
+      "projectName": "java_7846e781"
     },
     {
       "type": "java",
-      "name": "Current File",
+      "name": "TowersOfHanoi",
       "request": "launch",
+      "mainClass": "datastructures.assignments.assignment1.TowersOfHanoi",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "Palindrome",
+      "request": "launch",
+      "mainClass": "datastructures.assignments.assignment1.Palindrome",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "Test",
+      "request": "launch",
+      "mainClass": "datastructures.Labs.Lab4.Test",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "RecursivePrint",
+      "request": "launch",
+      "mainClass": "datastructures.Labs.Lab3.RecursivePrint",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "FibonacciSequence",
+      "request": "launch",
+      "mainClass": "datastructures.Labs.Lab3.FibonacciSequence",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "Test",
+      "request": "launch",
+      "mainClass": "Test",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "ReverseNumber",
+      "request": "launch",
+      "mainClass": "datastructures.Labs.Lab2.ReverseNumber",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "MaximumCharacter",
+      "request": "launch",
+      "mainClass": "datastructures.Labs.Lab2.MaximumCharacter",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "DownToZeroByThree",
+      "request": "launch",
+      "mainClass": "datastructures.Labs.Lab2.DownToZeroByThree",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "Test",
+      "request": "launch",
+      "mainClass": "Lab1.Test",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "Course",
+      "request": "launch",
+      "mainClass": "Lab1.Course",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "Instructor",
+      "request": "launch",
+      "mainClass": "Lab1.Instructor",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "Student",
+      "request": "launch",
+      "mainClass": "Lab1.Student",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "Person",
+      "request": "launch",
+      "mainClass": "Lab1.Person",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "Program",
+      "request": "launch",
+      "mainClass": "Program",
+      "projectName": "hellofx"
+    },
+    {
+      "type": "java",
+      "name": "AverageGradeData",
+      "request": "launch",
+      "mainClass": "learn.javafx.Lab8.AverageGradeData",
+      "projectName": "hellofx"
+    },
+    {
+      "type": "java",
+      "name": "DetectEndOfFile",
+      "request": "launch",
+      "mainClass": "learn.javafx.binary.io.DetectEndOfFile",
+      "projectName": "hellofx"
+    },
+    {
+      "type": "java",
+      "name": "BinaryIO",
+      "request": "launch",
+      "mainClass": "learn.javafx.Lab8.BinaryIO",
+      "projectName": "hellofx"
+    },
+    {
+      "type": "java",
+      "name": "WriteTime",
+      "request": "launch",
+      "mainClass": "learn.javafx.Lab8.WriteTime",
+      "projectName": "hellofx"
+    },
+    {
+      "type": "java",
+      "name": "LunchMenu",
+      "request": "launch",
+      "mainClass": "labs.lab7.LunchMenu",
+      "projectName": "hellofx"
+    },
+    {
+      "type": "java",
+      "name": "TextAreaDemo",
+      "request": "launch",
+      "mainClass": "learn.javafx.ui.controls.TextAreaDemo",
+      "projectName": "hellofx"
+    },
+    {
+      "type": "java",
+      "name": "ButtonInPane",
+      "request": "launch",
+      "mainClass": "learn.javafx.ButtonInPane",
+      "projectName": "hellofx"
+    },
+    {
+      "type": "java",
+      "name": "MyJavaFX",
+      "request": "launch",
+      "mainClass": "org.openjfx.MyJavaFX",
+      "projectName": "hellofx"
+    },
+    {
+      "type": "java",
+      "name": "MainApp2",
+      "request": "launch",
+      "mainClass": "org.openjfx.MainApp2",
+      "projectName": "hellofx",
+      "vmArgs": "--module-path lib --add-modules javafx.controls,javafx.fxml"
+    },
+    {
+      "type": "java",
+      "name": "MovingBB8",
+      "request": "launch",
+      "mainClass": "labs.lab6.MovingBB8",
+      "projectName": "hellofx",
+      "vmArgs": "--module-path lib --add-modules javafx.controls,javafx.fxml"
+    },
+    {
+      "type": "java",
+      "name": "Launch JavaFX App",
+      "request": "launch",
+      "mainClass": "org.openjfx.MainApp",
+      "vmArgs": "--module-path lib --add-modules javafx.controls,javafx.fxml",
+      "presentation": {
+        "hidden": false,
+        "group": "JavaFX",
+        "order": 1
+      }
+    },
+    {
+      "type": "java",
+      "name": "Run Java Program",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
       "mainClass": "${file}",
-      "projectName": ""
-    },
-    {
-      "type": "java",
-      "name": "App",
-      "request": "launch",
-      "mainClass": "com.computersciencework.App",
-      "projectName": "cs_work"
+      "vmArgs": "--module-path lib --add-modules javafx.controls,javafx.fxml,javafx.media"
     }
   ]
 }
