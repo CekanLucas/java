@@ -21,10 +21,13 @@ public class SingleLinkedList {
 
   public int size() {
     int listSize = 0;
+    SingleNode currentNode = head;
+
     if (head == null)
       return listSize;
-    while (head.next != null) {
+    while (currentNode != null) {
       listSize += 1;
+      currentNode = currentNode.next;
     }
     return listSize;
   }
@@ -32,12 +35,14 @@ public class SingleLinkedList {
   public void add(String item, int i) throws ListException {
     if (i < 0)
       throw new ListException(
-          "Index cannot be less than zero Method: add Index: " + i);
+          "Index cannot be less than zero\n Method: add Index: " + i);
     else if (i == 0) {
       head = new SingleNode(item, head);
       return;
     }
-
+    else if (i > size()) 
+      throw new ListException(
+          "Index cannot be more than size\n Method: add Index: " + i);
     SingleNode currentNode = head;
     int currentIndex = 0;
     while (currentNode != null) {
@@ -52,16 +57,15 @@ public class SingleLinkedList {
         currentIndex++;
       }
     }
-
-    throw new ListException("Index not found Method: add Index: " + i);
   }
 
   public String remove(int i) throws ListException {
     if (i < 0)
       throw new ListException("Index cannot be less than zero Method: remove Index: " + i);
     else if (i == 0) {
+      String removedItem= head.item;
       head = head.next;
-      return head.item;
+      return removedItem;
     }
 
     SingleNode currentNode = head;
@@ -128,6 +132,7 @@ public class SingleLinkedList {
           (currentNode.next == null ? "" : " -> "));
       currentNode = currentNode.next;
     }
+    str.append(" -> null");
     return str.toString();
   }
 
@@ -163,16 +168,26 @@ public class SingleLinkedList {
 
     list.add("Algoma U", 0);
     list.print();
+    System.out.println(list.size());
     list.add("COSC", 1);
     list.print();
+    System.out.println(list.size());
     list.add("Data Structures", 1);
     list.print();
+    System.out.println(list.size());
     list.add("Java", 3);
     list.print();
+    System.out.println(list.size());
+    System.out.println(list.remove(1));
     list.remove(1);
     list.print();
-    list.remove(0);
+    System.out.println(list.size());
+    System.out.println(list.remove(0));
     list.print();
+    System.out.println(list.size());
+
+    // test index out of bound exception
+    list.add("can't add this item", 5);
   }
 
 }
