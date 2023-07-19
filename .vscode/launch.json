@@ -21,6 +21,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ParenthesesChecking",
+      "request": "launch",
+      "mainClass": "datastructures.Labs.Lab8.ParenthesesChecking",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "Test",
+      "request": "launch",
+      "mainClass": "datastructures.Labs.Lab8.Test",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
+      "name": "ReverseString",
+      "request": "launch",
+      "mainClass": "datastructures.Labs.Lab8.ReverseString",
+      "projectName": "java_7846e781"
+    },
+    {
+      "type": "java",
       "name": "ImplementStack",
       "request": "launch",
       "mainClass": "datastructures.assignments.assignment2.ImplementStack",
