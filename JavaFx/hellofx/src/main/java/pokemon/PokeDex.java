@@ -1,5 +1,6 @@
 package pokemon;
 
+import java.awt.Font;
 import java.io.*;
 import java.util.*;
 
@@ -12,6 +13,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 public class PokeDex extends Application {
@@ -142,7 +145,7 @@ class CycleLabelColors {
   }
 
   private static final Paint[] colors = {
-      Color.BLACK,
+      Paint.valueOf("black"),
       Paint.valueOf("DarkGoldenrod"),
       Paint.valueOf("silver"),
       Paint.valueOf("SkyBlue"),
@@ -150,17 +153,21 @@ class CycleLabelColors {
   };
 
   public static void cycle(Label label) {
+
     Paint currentPaint = label.getTextFill();
-    for (int i = 0; i < colors.length; i++)
+    for (int i = 0; i < colors.length; i++) {
       if (colors[i].equals(currentPaint)) {
-        if (i == colors.length - 1) { // Fixed loop condition
+        if (i == colors.length - 1) {
           label.setTextFill(colors[0]);
+          label.setStyle("-fx-font-weight: normal;");
           return;
         } else {
-          label.setTextFill(colors[i + 1]); // Fixed color assignment
+          label.setTextFill(colors[i + 1]);
+          label.setStyle("-fx-font-weight: bold;");
           return;
         }
       }
+    }
     label.setTextFill(colors[0]);
   }
 }
