@@ -1,6 +1,5 @@
 package pokemon;
 
-import java.awt.Font;
 import java.io.*;
 import java.util.*;
 
@@ -11,10 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
-import javafx.scene.text.FontPosture;
-import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 public class PokeDex extends Application {
