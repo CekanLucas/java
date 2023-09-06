@@ -32,25 +32,23 @@ public class PokeDex extends Application {
   }
 
   private void updateFile(String pokemon, String checkbox, boolean isChecked) {
-    try {
+    try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
       List<String> lines = new ArrayList<>();
-      BufferedReader reader = new BufferedReader(new FileReader(filePath));
       String line;
       while ((line = reader.readLine()) != null) {
         lines.add(line);
       }
-      reader.close();
 
       PrintWriter writer = new PrintWriter(filePath);
-      for (String currLine : lines) {
-        if (currLine.startsWith(pokemon)) {
+      for (String currentLine : lines) {
+        if (currentLine.startsWith(pokemon)) {
           if (isChecked) {
-            currLine += " " + checkbox;
+            currentLine += " " + checkbox;
           } else {
-            currLine = currLine.replace(" " + checkbox, "");
+            currentLine = currentLine.replace(" " + checkbox, "");
           }
         }
-        writer.println(currLine);
+        writer.println(currentLine);
       }
       writer.close();
 
