@@ -1,0 +1,47 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "17.0.1"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.media' ]
+}
+
+dependencies {
+    implementation 'org.openjfx:javafx-fxml:17.0.1'
+    implementation 'org.openjfx:javafx-controls:17.0.1'
+    implementation 'org.openjfx:javafx-graphics:17.0.1'
+    implementation 'org.openjfx:javafx-base:17.0.1'
+    implementation 'org.xerial:sqlite-jdbc:3.34.0'
+}
+
+application {
+    mainClass = 'application.Main'
+}
+
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+processResources {
+    from('src/main/resources') {
+        include 'css/application.css'
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/main/java'
+        }
+        resources {
+            srcDirs 'src/main/resources'
+        }
+    }
+}
+
