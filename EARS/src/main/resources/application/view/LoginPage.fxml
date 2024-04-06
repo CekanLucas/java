@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -8,19 +13,17 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="650.0" style="-fx-background-color: #B71C1C;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="650.0" style="-fx-background-color: #B71C1C;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LoginController">
     <children>
       <Pane layoutX="310.0" layoutY="36.0" prefHeight="291.0" prefWidth="333.0">
          <children>
-              <Button fx:id="button" layoutX="40.0" layoutY="252.0" onAction="#handleForgetButtonAction" prefHeight="25.0" prefWidth="253.0" style="-fx-background-color: red;" text="FORGET PASSWORD" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Button>
             <Button fx:id="login_button" layoutX="40.0" layoutY="212.0" onAction="#handleLoginButtonAction" prefHeight="25.0" prefWidth="253.0" style="-fx-background-color: red;" text="LOGIN" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <TextField fx:id="email_field" layoutX="40.0" layoutY="68.0" prefHeight="25.0" prefWidth="253.0" />
             <Label layoutX="40.0" layoutY="49.0" text="EMAIL" textAlignment="CENTER" textFill="WHITE" />

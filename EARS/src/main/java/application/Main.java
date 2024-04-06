@@ -13,6 +13,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import application.controller.LoginController;
+
 public class Main extends Application {
 
     // The URL of the SQLite database
@@ -21,27 +23,39 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            // Load the FXML file
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/view/Main.fxml"));
+            // Load the FXML file starting with login
+            // FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/view/Main.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/view/LoginPage.fxml"));
             Parent root = loader.load();
 
-            // Check if the root element is an HBox
-            if (!(root instanceof HBox)) {
-                throw new IllegalStateException("Root element in FXML file is not an HBox");
-            }
+            // Assuming LoginController has a method to set the stage
+            LoginController controller = loader.getController();
+            controller.setStage(primaryStage);
 
-            HBox hbox = (HBox) root;
-
-            // Create a scene with the loaded root
-            Scene scene = new Scene(hbox, 573.0, 385.0);
-
-            // Add CSS stylesheet
-            scene.getStylesheets().add("/css/application.css");
-
-            // Set the scene and show the stage
+            Scene scene = new Scene(root);
             primaryStage.setScene(scene);
-            primaryStage.setTitle("EARS");
+            primaryStage.setTitle("Login");
             primaryStage.show();
+
+
+
+            // // Check if the root element is an HBox
+            // if (!(root instanceof HBox)) {
+            //     throw new IllegalStateException("Root element in FXML file is not an HBox");
+            // }
+
+            // HBox hbox = (HBox) root;
+
+            // // Create a scene with the loaded root
+            // Scene scene = new Scene(hbox, 573.0, 385.0);
+
+            // // Add CSS stylesheet
+            // scene.getStylesheets().add("/css/application.css");
+
+            // // Set the scene and show the stage
+            // primaryStage.setScene(scene);
+            // primaryStage.setTitle("EARS");
+            // primaryStage.show();
 
             // Connect to the SQLite database and display data
             displayData();

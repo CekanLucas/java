@@ -125,4 +125,20 @@ public class LoginController {
         this.stage = stage;
     }
 
+    public void loginSuccessful() {
+        try {
+            // Load the main application scene
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/view/Main.fxml"));
+            Parent mainRoot = loader.load();
+    
+            Scene scene = new Scene(mainRoot);
+            stage.setScene(scene); // 'stage' should be your current Stage, passed from Main
+            stage.setTitle("EARS");
+            stage.show();
+        } catch (Exception e) {
+            System.err.println("Error loading Main.fxml after login: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
 }
