@@ -47,7 +47,7 @@ public class Main extends Application {
             displayData();
 
         } catch (Exception e) {
-            System.err.println("Error loading FXML: " + e.getMessage());
+            System.err.println("Error in Main: " + e.getMessage());
             e.printStackTrace();
         }
     }
