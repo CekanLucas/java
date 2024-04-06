@@ -1,0 +1,67 @@
+/* General application list style */
+.applications-list {
+  -fx-padding: 10;
+  -fx-spacing: 10;
+}
+
+/* Header Label Style */
+.section-header {
+  -fx-font-size: 24px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #333333;
+}
+
+/* Individual application item style */
+.application-item {
+  -fx-alignment: center-left;
+  -fx-spacing: 10;
+  -fx-padding: 10;
+  -fx-background-color: #F7F7F7;
+  -fx-border-color: #E1E1E1;
+  -fx-border-width: 1;
+  -fx-border-radius: 5;
+  -fx-background-radius: 5;
+}
+
+/* Style for application name label */
+.application-name {
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #333333;
+}
+
+/* Style for application time label */
+.application-time {
+  -fx-font-size: 14px;
+  -fx-text-fill: #666666;
+}
+
+/* Style your action buttons */
+.application-action {
+  -fx-background-radius: 5;
+  -fx-border-color: transparent;
+  -fx-border-width: 0;
+  -fx-background-color: transparent;
+  -fx-cursor: hand;
+  -fx-graphic: url('path/to/your/icon.png');
+}
+
+/* Style for application menu button */
+.application-menu {
+  -fx-background-radius: 5;
+  -fx-border-color: transparent;
+  -fx-border-width: 0;
+  -fx-background-color: transparent;
+  -fx-cursor: hand;
+  -fx-graphic: url('path/to/your/menu/icon.png');
+}
+
+/* Style your see all applications button */
+.see-all-button {
+  -fx-background-color: #EB5757;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+  -fx-font-size: 16px;
+  -fx-padding: 10 20;
+  -fx-background-radius: 15;
+}

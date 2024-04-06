@@ -24,7 +24,6 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             // Load the FXML file starting with login
-            // FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/view/Main.fxml"));
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/view/LoginPage.fxml"));
             Parent root = loader.load();
 
@@ -36,26 +35,6 @@ public class Main extends Application {
             primaryStage.setScene(scene);
             primaryStage.setTitle("Login");
             primaryStage.show();
-
-
-
-            // // Check if the root element is an HBox
-            // if (!(root instanceof HBox)) {
-            //     throw new IllegalStateException("Root element in FXML file is not an HBox");
-            // }
-
-            // HBox hbox = (HBox) root;
-
-            // // Create a scene with the loaded root
-            // Scene scene = new Scene(hbox, 573.0, 385.0);
-
-            // // Add CSS stylesheet
-            // scene.getStylesheets().add("/css/application.css");
-
-            // // Set the scene and show the stage
-            // primaryStage.setScene(scene);
-            // primaryStage.setTitle("EARS");
-            // primaryStage.show();
 
             // Connect to the SQLite database and display data
             displayData();

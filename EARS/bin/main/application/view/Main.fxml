@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1200.0" prefWidth="1800.0" styleClass="root" stylesheets="@css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" styleClass="root" stylesheets="@css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
    <children>
       <VBox fx:id="menubar" minWidth="-Infinity" prefWidth="200.0" styleClass="menubar" stylesheets="@css/application.css">
          <children>
@@ -179,7 +179,7 @@
                   <Font size="32.0" />
                </font>
             </Label>
-            <Pane VBox.vgrow="ALWAYS">
+            <VBox VBox.vgrow="ALWAYS">
                <children>
                   <GridPane alignment="CENTER" hgap="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="1000.0">
                     <columnConstraints>
@@ -301,6 +301,9 @@
                               </Label>
                               <Label layoutX="14.0" layoutY="40.0" styleClass="noofemployee" text="241" />
                            </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
                         </Pane>
                         <Pane prefHeight="110.0" prefWidth="400.0" styleClass="talentpane" GridPane.columnIndex="1">
                            <children>
@@ -309,10 +312,47 @@
                            </children>
                         </Pane>
                      </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </GridPane>
+                  <ScrollPane id="applications-scrollpane" layoutX="74.0" layoutY="322.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="applicationsList" spacing="10" styleClass="applications-list" stylesheets="@css/applicationList.css">
+                           <children>
+                              <Label styleClass="pageLable" stylesheets="@css/application.css" text="Application List" textFill="#801313">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Label>
+                              <!-- Application Item for Harry Potter -->
+                              <HBox fillHeight="false" styleClass="application-item" VBox.vgrow="ALWAYS">
+                                    <children>
+                                    <Pane HBox.hgrow="ALWAYS">
+                                       <children>
+                                             <Label alignment="BOTTOM_LEFT" styleClass="application-name" text="Harry Potter">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Pane>
+                                    </children>
+                              </HBox>
+                              <!-- Repeat HBox for each application as necessary -->
+                              <!-- ... -->
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
                </children>
-            </Pane>
-            <Pane prefHeight="169.0" prefWidth="317.0" />
+            </VBox>
          </children>
          <HBox.margin>
             <Insets left="10.0" right="10.0" />
@@ -321,29 +361,8 @@
             <Insets left="10.0" right="10.0" />
          </padding>
          </VBox>
-      <VBox fillWidth="false">
-         <children>
-            <AnchorPane>
-               <children>
-                  <Pane centerShape="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="500.0" prefWidth="550.0" scaleShape="false" styleClass="activityPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <children>
-                        <Label alignment="CENTER" layoutX="20.0" layoutY="20.0" styleClass="activityPanelable" text="Recent Activity" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="32.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </Pane>
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="158.0" prefWidth="20.0" />
-         </children>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </VBox>
    </children>
+   <padding>
+      <Insets right="10.0" />
+   </padding>
 </HBox>

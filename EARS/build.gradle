@@ -9,15 +9,17 @@ repositories {
 
 javafx {
     version = "17.0.1"
-    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.media' ]
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.media', 'javafx.web' ]
 }
 
 dependencies {
     implementation 'org.openjfx:javafx-fxml:17.0.1'
     implementation 'org.openjfx:javafx-controls:17.0.1'
     implementation 'org.openjfx:javafx-graphics:17.0.1'
+    implementation 'org.openjfx:javafx-web:17.0.1'
     implementation 'org.openjfx:javafx-base:17.0.1'
     implementation 'org.xerial:sqlite-jdbc:3.34.0'
+    implementation 'com.atlassian.commonmark:commonmark:0.15.2'
 }
 
 application {
